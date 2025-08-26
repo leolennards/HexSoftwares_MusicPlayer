@@ -1,0 +1,208 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.player {
+  background: rgba(20, 30, 48, 0.95);
+  padding: 30px 25px 25px 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.album-art {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  background: #222;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.album-art:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(30, 185, 84, 0.25);
+}
+
+h1 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #232526 60%, #1db954 100%);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30, 185, 84, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.controls button:hover {
+  background: linear-gradient(135deg, #1ed760 60%, #232526 100%);
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(30, 185, 84, 0.25);
+}
+
+.controls svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+}
+
+.progress-container {
+  background: #333;
+  height: 7px;
+  border-radius: 7px;
+  margin: 18px 0 10px 0;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+#progress {
+  background: linear-gradient(90deg, #1db954 60%, #1ed760 100%);
+  height: 100%;
+  width: 0%;
+  border-radius: 7px;
+  transition: width 0.2s;
+}
+
+.volume-control {
+  margin: 18px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#volume {
+  width: 90px;
+  accent-color: #1db954;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 18px;
+  background: rgba(36, 59, 85, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 30, 48, 0.08);
+  max-height: 160px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #1db954 #202b3a;
+}
+
+#playlist::-webkit-scrollbar {
+  width: 8px;
+  background: #202b3a;
+  border-radius: 8px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #1db954 60%, #243b55 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30, 185, 84, 0.1);
+  border: 2px solid #202b3a;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1ed760 60%, #243b55 100%);
+}
+
+#playlist li {
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s, color 0.2s;
+  font-size: 1em;
+}
+
+#playlist li:last-child {
+  border-bottom: none;
+}
+
+#playlist li.active {
+  color: #1db954;
+  background: rgba(29, 185, 84, 0.08);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#playlist li:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.player.playing .album-art {
+  box-shadow: 0 0 32px 4px #1db95488, 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+#song-info {
+  margin-bottom: 10px;
+}
+
+#song-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#song-artist {
+  color: #1db954;
+  font-size: 0.95em;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95em;
+  color: #b2dfdb;
+  margin: 0 2px 8px 2px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .player {
+    width: 98vw;
+    padding: 10px 2vw;
+  }
+  .album-art {
+    width: 90px;
+    height: 90px;
+  }
+}

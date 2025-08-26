@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player">
+      <h1>Music Player</h1>
+      <img id="album-art" class="album-art" src="https://via.placeholder.com/120x120?text=Album+Art" alt="Album Art" />
+
+      <div id="song-info">
+        <div id="song-title"></div>
+        <div id="song-artist"></div>
+      </div>
+
+      <audio id="audio"></audio>
+
+      <div class="controls">
+        <button id="prev" aria-label="Previous">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <polygon points="16,18 10,12 16,6" fill="currentColor" />
+            <rect x="6" y="6" width="2" height="12" rx="1" fill="currentColor" />
+          </svg>
+        </button>
+        <button id="play" aria-label="Play/Pause">
+          <svg id="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <polygon points="8,5 19,12 8,19" fill="currentColor" />
+          </svg>
+          <svg id="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" style="display: none">
+            <rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" />
+            <rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" />
+          </svg>
+        </button>
+        <button id="next" aria-label="Next">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <polygon points="8,6 14,12 8,18" fill="currentColor" />
+            <rect x="16" y="6" width="2" height="12" rx="1" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="progress-container">
+        <div id="progress"></div>
+      </div>
+      <div class="time-info">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="volume-control">
+        <label for="volume">🔊</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1" />
+      </div>
+
+      <ul id="playlist"></ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
