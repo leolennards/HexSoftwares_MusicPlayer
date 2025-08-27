@@ -1,5 +1,5 @@
 const songs = [
-  { title: "All My Life", src: "songs/AllMyLife-K-Ci&JoJo.mp3", artist: "K-Ci & JoJo", albumArt: "images/allmylife.jpg" },
+  { title: "All My Life", src: "songs/AllMyLife-K-Ci&JoJo.mp3", artist: "K-Ci & JoJo", albumArt: "images/AllMyLife.jpg" },
 
   { title: "Mr. Telephone Man", src: "songs/MrTelephoneMan-NewEdition.mp3", artist: "New Edition", albumArt: "images/Mr.TelephoneMan.jpg" },
 
