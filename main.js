@@ -11,7 +11,7 @@ const songs = [
 
   { title: "All I Have (feat. LL Cool J)", src: "songs/Jennifer Lopez - All I Have (feat. LL Cool J).mp3", artist: "Jennifer Lopez", albumArt: "images/JenniferLopez.jpg" },
 
-  { title: "Baby (feat. Kerry)", src: "Kulud - Baby (feat. Kerry).mp3", artist: "Kulud", albumArt: "images/Baby.jpg" },
+  { title: "Baby (feat. Kerry)", src: "songs/Kulud - Baby (feat. Kerry).mp3", artist: "Kulud", albumArt: "images/Baby.jpg" },
 
   { title: "Be My Queen (feat. Verd)", src: "songs/Kulud - Be My Queen (feat. Verd).mp3", artist: "Kulud", albumArt: "images/Queen.jpg" },
 
